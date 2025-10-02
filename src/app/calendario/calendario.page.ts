@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonButtons, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonButtons, IonIcon, IonButton, IonList, IonItem, IonLabel, IonText, IonNote } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import { Api, Feriado } from '../services/api';
 
@@ -17,7 +17,12 @@ import { Api, Feriado } from '../services/api';
     IonButtons,
     IonIcon,
     RouterLink,
-    IonButton
+    IonButton,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote
 ],
 })
 export class CalendarioPage implements OnInit {

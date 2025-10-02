@@ -1,0 +1,54 @@
+.container {
+  padding: 5% 5%;
+  background: #1a1a2e;
+  height: 100dvh;
+
+  header {
+    display: flex;
+    align-content: center;
+    width: 100%;
+
+    ion-buttons {
+      ion-icon {
+        color: white;
+      }
+    }
+
+    h3 {
+      width: 85%;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .infos-conteiner {
+    .foto-conteiner {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 3px solid #e0e0e0;
+      }
+    }
+
+    .card-infos {
+        
+    }
+  }
+
+  .buttons-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    ion-button {
+      --background: #3e92cc;
+      --border-radius: 20px;
+      --color: #e0e0e0;
+    }
+  }
+}
