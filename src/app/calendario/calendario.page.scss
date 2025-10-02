@@ -1,0 +1,53 @@
+.container {
+  padding: 5% 5%;
+  background: #1a1a2e;
+  height: 100dvh;
+
+  header {
+    display: flex;
+    align-content: center;
+    width: 100%;
+
+    h3 {
+      width: 85%;
+      text-align: center;
+    }
+  }
+
+  .seletor-ano-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 220px;
+    margin: 0 auto 24px;
+
+    background: #e0e0e0;
+    border-radius: 16px;
+  }
+
+  .ano-display {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ion-color-primary);
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .seletor-ano-horizontal ion-button {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --ripple-color: var(--ion-color-primary);
+
+    ion-icon {
+      font-size: 1.4rem;
+      color: var(--ion-color-primary);
+    }
+  }
+}
+
+body.dark {
+  .seletor-ano-horizontal {
+    background: rgba(var(--ion-color-primary-rgb), 0.15);
+  }
+}

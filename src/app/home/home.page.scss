@@ -1,0 +1,115 @@
+.container {
+  position: relative;
+  height: 100dvh;
+  z-index: 0;
+
+  header {
+    position: relative;
+    z-index: 1;
+    background: #1a1a2e;
+    height: 40dvh;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10% 5%;
+
+      h1 {
+        text-wrap: wrap;
+        font-weight: bold;
+        color: #e0e0e0;
+      }
+
+      .perfil {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 3px solid #e0e0e0;
+      }
+    }
+  }
+
+  .card-container {
+    position: absolute;
+    top: 20dvh;
+    z-index: 3;
+    width: 100%;
+    left: 3%;
+
+    ion-card {
+      border-radius: 20px;
+      padding: 20px 10px;
+      width: 90%;
+
+      ion-card-header {
+        ion-card-subtitle {
+          --color: #3e92cc;
+          font-weight: bold;
+        }
+        ion-card-title {
+          font-weight: bold;
+        }
+      }
+      ion-card-content {
+        color: #a0a0a0;
+      }
+    }
+  }
+
+  .section-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 7% 7% 0 0;
+    background: #e0e0e0;
+    height: 70dvh;
+    z-index: 2;
+    padding: 0 5%;
+
+    .list-container {
+      margin-top: 110px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      h3 {
+        font-weight: 600;
+      }
+
+      ion-list {
+        border-radius: 20px;
+
+        ion-item {
+          ion-icon[name="calendar"] {
+            background: #3e92cc;
+            padding: 10px;
+            border-radius: 50%;
+            color: #e0e0e0;
+          }
+        }
+      }
+    }
+
+    .buttons-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+
+      ion-button {
+        --background: #3e92cc;
+        --border-radius: 20px;
+        --color: #e0e0e0;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    .section-footer {
+      background: var(--ion-color-step-150, #2a2a2a);
+    }
+  }
+}

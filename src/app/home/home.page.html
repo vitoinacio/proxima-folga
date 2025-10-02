@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <header>
+      <div>
+        <h1>Próxima Folga</h1>
+        <img
+          src="../../../assets/perfil.jpg"
+          alt="foto de perfil"
+          class="perfil"
+        />
+      </div>
+    </header>
+    <div class="card-container">
+      @if (proximoFeriado) {
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Próximo Feriado</ion-card-subtitle>
+          <ion-card-title>{{ proximoFeriado.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ proximoFeriado.date | date:'d':'UTC' }} de {{ proximoFeriado.date |
+          date:'MMMM':'UTC' | titlecase }} ( {{ proximoFeriado.date |
+          date:'EEEE':'UTC' | titlecase }} )
+        </ion-card-content>
+      </ion-card>
+      }
+    </div>
+    <div class="section-footer">
+      <div class="list-container">
+        <h3>Próximos feriados</h3>
+        @if (proximosFeriados.length) {
+        <ion-list>
+          @for (feriado of proximosFeriados; track $index) {
+          <ion-item [button]="true" detail="false">
+            <ion-icon name="calendar" slot="start"></ion-icon>
+            <ion-label>
+              <ion-text>{{feriado.name}}</ion-text><br />
+              <ion-note color="medium" class="ion-text-wrap">
+                {{ feriado.date | date:'d':'UTC' }} de {{ feriado.date |
+                date:'MMMM':'UTC' | titlecase }}
+              </ion-note>
+            </ion-label>
+          </ion-item>
+          }
+        </ion-list>
+        }
+      </div>
+      <div class="buttons-container">
+        <ion-button [routerLink]="['/calendario']"
+          >Calendario de feriados</ion-button
+        >
+        <ion-button [routerLink]="['/perfil']">Meu Perfil</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "proxima-folga",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <header>
+      <ion-buttons slot="start">
+        <ion-icon
+          name="chevron-back"
+          [routerLink]="['home']"
+          size="large"
+        ></ion-icon>
+      </ion-buttons>
+      <h3>Calendário de Feriados</h3>
+    </header>
+
+    <div class="seletor-ano-horizontal">
+      <ion-button fill="clear" (click)="anoAnterior()">
+        <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+
+      <div class="ano-display">{{ anoSelecionado }}</div>
+
+      <ion-button fill="clear" (click)="proximoAno()">
+        <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
