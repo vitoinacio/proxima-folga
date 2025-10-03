@@ -36,7 +36,18 @@
     }
 
     .card-infos {
-        
+      ion-list {
+        border-radius: 20px;
+
+        ion-item {
+          ion-icon {
+            background: #3e92cc;
+            padding: 10px;
+            border-radius: 50%;
+            color: #e0e0e0;
+          }
+        }
+      }
     }
   }
 
